@@ -1,0 +1,9 @@
+<input class="analysis-input" type="text" placeholder="insira uma frase" (ngModel)="context" (keyup.enter)="teste($event)">
+<br>
+<br>
+<span *ngIf="context">{{context}}</span>
+<br>
+<br>
+<pre>
+  {{ myArr }}
+</pre>

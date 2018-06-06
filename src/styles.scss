@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body { 
+  width: 100%; 
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.analysis-input {
+  width: 400px;
+  height: 60px;
+  margin-top: 100px;
+  text-indent: 15px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 12px 21px rgba(0,0,0,0.2);
+  transition: all .3s ease-in-out;
+
+  &::-webkit-input-placeholder { font-weight: 300; font-size: .9rem; color: #bbbbbb; }
+  &::-moz-placeholder { font-weight: 300; font-size: .9rem; color: #bbbbbb; }
+  &:-ms-input-placeholder { font-weight: 300; font-size: .9rem; color: #bbbbbb; }
+  &:-moz-placeholder { font-weight: 300; font-size: .9rem; color: #bbbbbb; }
+
+  &:focus { outline: none; transform: translateY(-6px); }
+
+  &:hover { box-shadow: 0 0px 12px rgba(0,0,0,0.2); }
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { AnalysisComponent } from './analysis/analysis.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  @ViewChild(AnalysisComponent) analysis;
+  
+  sentiment: string
+
+  constructor() {}
+
+  ngAfterChildInit() {
+    this.sentiment = this.analysis.message;
+    console.log(this.analysis.message);
+  }
+
 }
